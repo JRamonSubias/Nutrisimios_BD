@@ -7,7 +7,7 @@
     tools:context=".SignIn">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginETUser"
+        android:id="@+id/singInETUser"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtpassword"
+        android:id="@+id/singInEtpassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         app:flow_firstHorizontalBias=".5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginETUser"
+        app:layout_constraintTop_toBottomOf="@+id/singInETUser"
         app:layout_constraintWidth_percent=".8">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -63,6 +63,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/singInBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
@@ -71,19 +72,19 @@
         android:text="@string/signIn"
         app:cornerRadius="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/LoginEtpassword"
-        app:layout_constraintStart_toStartOf="@+id/LoginEtpassword"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtpassword" />
+        app:layout_constraintEnd_toEndOf="@+id/singInEtpassword"
+        app:layout_constraintStart_toStartOf="@+id/singInEtpassword"
+        app:layout_constraintTop_toBottomOf="@+id/singInEtpassword" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/singIntextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/forgotPassword"
         android:textColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/LoginEtpassword"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtpassword" />
+        app:layout_constraintEnd_toEndOf="@+id/singInEtpassword"
+        app:layout_constraintTop_toBottomOf="@+id/singInEtpassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

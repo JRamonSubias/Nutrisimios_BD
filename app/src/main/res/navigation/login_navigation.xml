@@ -9,7 +9,7 @@
         android:id="@+id/login_tab"
         android:name="com.esime.nutrisimios_bd.SignIn"
         android:label="fragment_login_tab"
-        tools:layout="@layout/fragment_login_tab" >
+        tools:layout="@layout/fragment_sing_in" >
         <action
             android:id="@+id/action_login_tab_to_singUp"
             app:destination="@id/singUp" />

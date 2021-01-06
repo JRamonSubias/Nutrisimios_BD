@@ -7,7 +7,7 @@
     tools:context=".SingUp">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginETUser"
+        android:id="@+id/singUpETUser"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtpassword"
+        android:id="@+id/singUpEtpassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         app:flow_firstHorizontalBias=".5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtApPaterno"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtApPaterno"
         app:layout_constraintWidth_percent=".8">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -61,7 +61,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtConfirmPassword"
+        android:id="@+id/singUpEtConfirmPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         app:flow_firstHorizontalBias=".5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtpassword"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtpassword"
         app:layout_constraintWidth_percent=".8">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -88,7 +88,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtNombre"
+        android:id="@+id/singUpEtNombre"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
         app:flow_firstHorizontalBias=".5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginETUser"
+        app:layout_constraintTop_toBottomOf="@+id/singUpETUser"
         app:layout_constraintWidth_percent=".8">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -116,7 +116,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtApPaterno"
+        android:id="@+id/singUpEtApPaterno"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtNombre">
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtNombre">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -142,7 +142,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginEtAp_Materno"
+        android:id="@+id/singUpEtAp_Materno"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/LoginEtApPaterno">
+        app:layout_constraintTop_toTopOf="@+id/singUpEtApPaterno">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -174,14 +174,15 @@
         android:orientation="vertical" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/singUpBtn"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:text="@string/SignUp"
         app:cornerRadius="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/LoginEtConfirmPassword"
-        app:layout_constraintStart_toStartOf="@+id/LoginEtConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEtConfirmPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/singUpEtConfirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/singUpEtConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtConfirmPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
