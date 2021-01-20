@@ -4,16 +4,29 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PlanViewModel extends ViewModel {
+import com.esime.nutrisimios_bd.Data.Repository;
+import com.esime.nutrisimios_bd.Data.model.Alimento;
 
-    private MutableLiveData<String> mText;
+import java.util.List;
+
+public class    PlanViewModel extends ViewModel {
+
+    private MutableLiveData<List<Alimento>> listAlimentoLiveData;
+    Repository repository;
 
     public PlanViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+       repository = new Repository();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public MutableLiveData<List<Alimento>> getListAlimentos(){
+        listAlimentoLiveData = repository.getListAlimento();
+        return listAlimentoLiveData;
     }
+
+    public void insertAlimento(String nombre, String proteina, String grasa, String sodio, String carbos, String calorias,
+                               String porcion, String grupoAlimenticio ){
+        repository.insertAlimento(nombre, proteina, grasa, sodio, carbos, calorias, porcion, grupoAlimenticio);
+
+    }
+
 }

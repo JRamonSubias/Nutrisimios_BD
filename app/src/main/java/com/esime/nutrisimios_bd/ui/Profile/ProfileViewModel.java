@@ -1,19 +1,25 @@
 package com.esime.nutrisimios_bd.ui.Profile;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ProfileViewModel extends ViewModel {
+import com.esime.nutrisimios_bd.Data.Repository;
+import com.esime.nutrisimios_bd.Data.model.Cita;
 
-    private MutableLiveData<String> mText;
+import java.util.List;
+
+public class ProfileViewModel extends ViewModel {
+    private final Repository repository;
+    private MutableLiveData<List<Cita>> listCitasLiveData;
 
     public ProfileViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
-    }
+       repository = new Repository();
+       }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
+
+     public MutableLiveData<List<Cita>> getListCitas  (String id_nutriologo){
+            listCitasLiveData = repository.getListCitasNutriologo(id_nutriologo);
+            return listCitasLiveData;
+     }
+
 }

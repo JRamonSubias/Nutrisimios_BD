@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignIn">
+    tools:context=".ui.SingIn.SignIn">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/singInETUser"
@@ -66,6 +66,7 @@
         android:id="@+id/singInBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:backgroundTint="@color/green"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"

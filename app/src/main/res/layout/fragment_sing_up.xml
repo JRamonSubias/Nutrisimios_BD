@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingUp">
+    tools:context=".ui.SingUp.SingUp"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/singUpETUser"
@@ -30,7 +36,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,13 +57,13 @@
         app:flow_firstHorizontalBias=".5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singUpEtApPaterno"
+        app:layout_constraintTop_toBottomOf="@+id/addPaciente_EtApPaterno"
         app:layout_constraintWidth_percent=".8">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,11 +90,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/singUpEtNombre"
+        android:id="@+id/addAlimento_EtNombre"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -111,12 +117,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/singUpEtApPaterno"
+        android:id="@+id/addPaciente_EtApPaterno"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -133,16 +139,16 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singUpEtNombre">
+        app:layout_constraintTop_toBottomOf="@+id/addAlimento_EtNombre">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/singUpEtAp_Materno"
+        android:id="@+id/addPaciente_EtAp_Materno"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -158,31 +164,139 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/singUpEtApPaterno">
+        app:layout_constraintTop_toTopOf="@+id/addPaciente_EtApPaterno">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"/>
+            android:textColor="@color/green" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/singUpEt_Cedula"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Cedula"
+        android:textColorHint="@color/green"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/singUpEtConfirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/singUpEtConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtConfirmPassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/singUpEtDirecion"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Direccion"
+        android:textColorHint="@color/green"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/singUpEt_Cedula"
+        app:layout_constraintStart_toStartOf="@+id/singUpEt_Cedula"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEt_Cedula">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/singUpEtTelefono"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Telefono"
+        android:textColorHint="@color/green"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/singUpEtDirecion"
+        app:layout_constraintStart_toStartOf="@+id/singUpEtDirecion"
+        app:layout_constraintTop_toBottomOf="@+id/singUpEtDirecion">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/singUpchClinica1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:checkable="true"
+            android:text="NUTRISIMIOS"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/singUpchClinica2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singUpEtTelefono" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/singUpchClinica2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:checkable="true"
+            android:text="NUTRISIMIOS_IZT"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/singUpchClinica1"
+            app:layout_constraintTop_toTopOf="@+id/singUpchClinica1" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent=".5"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/singUpBtn"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/SignUp"
-        app:cornerRadius="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/singUpEtConfirmPassword"
-        app:layout_constraintStart_toStartOf="@+id/singUpEtConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/singUpEtConfirmPassword" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/singUpBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/SignUp"
+            app:cornerRadius="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/singUpEtConfirmPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/singUpEtConfirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/singUpchClinica1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

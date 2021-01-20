@@ -9,13 +9,13 @@
         android:id="@+id/navigation_home"
         android:name="com.esime.nutrisimios_bd.ui.Profile.Profile"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_Profile" />
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.esime.nutrisimios_bd.ui.Progress.Progress"
+        android:name="com.esime.nutrisimios_bd.ui.Pacientes.Progress"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_Progress" />
+        tools:layout="@layout/fragment_progress" />
 
     <fragment
         android:id="@+id/navigation_notifications"

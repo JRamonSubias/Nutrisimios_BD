@@ -1,7 +1,8 @@
-package com.esime.nutrisimios_bd;
+package com.esime.nutrisimios_bd.ui;
 
 import android.os.Bundle;
 
+import com.esime.nutrisimios_bd.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +18,7 @@ public class NutriActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutri);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        getSupportActionBar().hide();
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();

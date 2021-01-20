@@ -8,6 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#12EC6D</color>
+    <color name="greenDark"> #00b248</color>
+    <color name="cardBackground">#C4E8E4E4</color>
+    <color name="blue">#C4218BF4</color>
+    <color name="pink">#C4F440F4</color>
+    <color name="brown">#C4735315</color>
+    <color name="brownDark">#C4594010</color>
+    <color name="red">#C4BC2B6A</color>
+    <color name="yellow">#C4F6BE51</color>
+
+
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#12EC6D</color>
 </resources>

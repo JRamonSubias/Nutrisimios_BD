@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap_register_paciente"
+    app:startDestination="@id/presentation">
+
+    <fragment
+        android:id="@+id/presentation"
+        android:name="com.esime.nutrisimios_bd.ui.RegisterPaciente.Presentation"
+        android:label="fragment_presentation"
+        tools:layout="@layout/fragment_presentation" >
+        <action
+            android:id="@+id/action_presentation_to_registerPacienteStep1"
+            app:destination="@id/registerPacienteStep1" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPacienteStep1"
+        android:name="com.esime.nutrisimios_bd.ui.RegisterPaciente.RegisterPacienteStep1"
+        android:label="fragment_register_paciente_step1"
+        tools:layout="@layout/fragment_register_paciente_step1" >
+        <action
+            android:id="@+id/action_registerPacienteStep1_to_registerPacienteStep2"
+            app:destination="@id/registerPacienteStep2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPacienteStep2"
+        android:name="com.esime.nutrisimios_bd.ui.RegisterPaciente.RegisterPacienteStep2"
+        android:label="fragment_register_paciente_step2"
+        tools:layout="@layout/fragment_register_paciente_step2" >
+        <action
+            android:id="@+id/action_registerPacienteStep2_to_registerPacienteStep3"
+            app:destination="@id/registerPacienteStep3" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPacienteStep3"
+        android:name="com.esime.nutrisimios_bd.ui.RegisterPaciente.RegisterPacienteStep3"
+        android:label="fragment_register_paciente_step3"
+        tools:layout="@layout/fragment_register_paciente_step3" >
+        <action
+            android:id="@+id/action_registerPacienteStep3_to_registerPacienteStep4"
+            app:destination="@id/registerPacienteStep4" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPacienteStep4"
+        android:name="com.esime.nutrisimios_bd.ui.RegisterPaciente.RegisterPacienteStep4"
+        android:label="fragment_register_paciente_step4"
+        tools:layout="@layout/fragment_register_paciente_step4" />
+</navigation>

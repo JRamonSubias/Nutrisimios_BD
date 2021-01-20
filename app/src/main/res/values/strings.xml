@@ -16,4 +16,61 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="profile">Perfil</string>
+    <string name="progress">Progreso</string>
+    <string name="plan">Plan</string>
+    <string name="Skip">Omitir</string>
+    <string name="Next">Siguiente</string>
+    <string name="back">Volver</string>
+    <string name="Sexo">¿Eres hombre o mujer?</string>
+    <string name="Man">Hombre</string>
+    <string name="Woman">Mujer</string>
+    <string name="Edad">Edad</string>
+    <string name="EdadQuestion">¿Cuantos años tienes?</string>
+    <string name="PadecimientoQuestion">¿Sufre algun padecimiento?</string>
+    <string name="medidaQuestion">¿Cual es su medidas?</string>
+    <string name="cadera">Cadera</string>
+    <string name="Cintura">Cintura</string>
+    <string name="PesoQuestion">¿cuanto pesas?</string>
+    <string name="TallaQuestion">Altura</string>
+    <string name="Peso">Peso</string>
+    <string name="ClinicaQuestion">"¿A que clinica va? "</string>
+    <string name="finish">Terminar registro</string>
+    <string name="cellPhone">Numero telefonico</string>
+
+
+    <string-array name="padecimientos_array">
+        <item>Diabetes</item>
+        <item>Obesidad</item>
+        <item>Hipertension</item>
+        <item>Acido urico</item>
+        <item>Asma</item>
+        <item>Embarazo</item>
+        <item>Hipoglucemia</item>
+    </string-array>
+
+    <string-array name="Type_array">
+        <item>Tipo1</item>
+        <item>Tipo2</item>
+    </string-array>
+
+    <string-array name="grade_array">
+        <item>leve</item>
+        <item>Grave</item>
+    </string-array>
+
+
+    <string-array name="grupo_alimenticio">
+        <item>Verduras</item>
+        <item>Frutas</item>
+        <item>Cereales y tuberculos</item>
+        <item>Leguminosas</item>
+        <item>Leche</item>
+        <item>Alimentos de origen animal</item>
+        <item>Aceites y Grasas</item>
+        <item>Azucares</item>
+        <item>Alimentos libres en energia</item>
+        <item>Bebidas alcoholicas</item>
+    </string-array>
+
 </resources>

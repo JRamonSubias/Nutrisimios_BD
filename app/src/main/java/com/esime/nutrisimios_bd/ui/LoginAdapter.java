@@ -1,4 +1,4 @@
-package com.esime.nutrisimios_bd;
+package com.esime.nutrisimios_bd.ui;
 
 import android.content.Context;
 
@@ -6,6 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.esime.nutrisimios_bd.ui.SingIn.SignIn;
+import com.esime.nutrisimios_bd.ui.SingUp.SingUp;
 
 public class LoginAdapter extends FragmentPagerAdapter {
     private Context context;
