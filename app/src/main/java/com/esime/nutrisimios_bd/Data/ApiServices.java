@@ -66,6 +66,12 @@ public interface ApiServices {
                 @Query("ID_Cli_nut") String ID_Cli_nut
         );
 
+        @GET("deleteNutriologo.php?")
+        Call<NutriologoResponse> deleteNutriologo(@Query("ID_Nutriologo") String idNutriologo);
+
+        @GET("deleteNameNutriologo.php?")
+        Call<NombrePacienteResponse> deleteNameNutriologo(@Query("ID_Nom_nut") String idNamNnutruiologo);
+
     //CITAS
         @GET("getListCitas.php")
         Call<CitaResponse> getListCitas();

@@ -81,6 +81,7 @@ public class Repository {
                     List<Nutriologo> list = response.body().getNutriologo();
                     for( int i=0; i<list.size();i++){
                         if(correo.equals(list.get(i).getCorreo()) && password.equals(list.get(i).getPassword())){
+                            String a = list.get(i).getiDNutriologo();
                             Call<NutriologoResponse> responseCall = apiServices.validateNutriologo(list.get(i).getiDNutriologo());
                             responseCall.enqueue(new Callback<NutriologoResponse>() {
                                 @Override
@@ -451,6 +452,22 @@ public class Repository {
 
                         }
                     });
+                    Call<NutriologoResponse> call1 = apiServices.insertNameNutriologo(idNombreNutriologo,nombre,apPaterno,apMaterno);
+                    call1.enqueue(new Callback<NutriologoResponse>() {
+                        @Override
+                        public void onResponse(Call<NutriologoResponse> call, Response<NutriologoResponse> response) {
+                            if(response.isSuccessful()){
+
+                            }else{
+                                Toast.makeText(MyApp.getContext(), "ERROR name", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<NutriologoResponse> call, Throwable t) {
+                            Toast.makeText(MyApp.getContext(), "ERROR nameInsert", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }else{
                     Toast.makeText(MyApp.getContext(), "ERROR insertNutriologo", Toast.LENGTH_SHORT).show();
                 }
@@ -463,5 +480,47 @@ public class Repository {
         });
     }
 
+    private void insertNu(){
+
+    }
+
+
+    public void deleteNutriologo(String idNutriologo){
+        Call<NutriologoResponse> nutriologoResponseCall = apiServices.deleteNutriologo(idNutriologo);
+        nutriologoResponseCall.enqueue(new Callback<NutriologoResponse>() {
+            @Override
+            public void onResponse(Call<NutriologoResponse> call, Response<NutriologoResponse> response) {
+                if (response.isSuccessful()){
+                    Toast.makeText(MyApp.getContext(), "Nutriologo borrado", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(MyApp.getContext(), "algo salio mal, deleteNutriologo", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<NutriologoResponse> call, Throwable t) {
+                Toast.makeText(MyApp.getContext(), "ERROR deleteNutriologo", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void deleteNameNutriologo(String idNameNutriologo){
+            Call<NombrePacienteResponse> nameResponseCall = apiServices.deleteNameNutriologo(idNameNutriologo);
+            nameResponseCall.enqueue(new Callback<NombrePacienteResponse>() {
+                @Override
+                public void onResponse(Call<NombrePacienteResponse> call, Response<NombrePacienteResponse> response) {
+                    if(response.isSuccessful()){
+
+                    }else{
+                        Toast.makeText(MyApp.getContext(), "algo salio mal deleteName", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<NombrePacienteResponse> call, Throwable t) {
+                    Toast.makeText(MyApp.getContext(), "ERROR deleteName", Toast.LENGTH_SHORT).show();
+                }
+            });
+    }
 
 }

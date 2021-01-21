@@ -43,6 +43,14 @@ public class Profile extends Fragment {
         loadUserInformation();
         loadCitasNutriologo();
 
+        ivConfiurations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SeetingProfile profile = new SeetingProfile();
+                profile.show(getChildFragmentManager(),"SeetingProfile");
+            }
+        });
+
         return view;
     }
 
@@ -78,5 +86,6 @@ public class Profile extends Fragment {
         tvTelephone = view.findViewById(R.id.profile_tvPhone);
         tvClinic = view.findViewById(R.id.profile_tvClinica);
         recyclerView = view.findViewById(R.id.profile_recyclerView);
+        ivConfiurations = view.findViewById(R.id.imageViewSetting);
     }
 }

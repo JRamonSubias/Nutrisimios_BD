@@ -22,4 +22,9 @@ public class ProfileViewModel extends ViewModel {
             return listCitasLiveData;
      }
 
+     public void deleteNutriologo(String idNutriologo){
+        repository.deleteNutriologo(idNutriologo);
+        repository.deleteNameNutriologo(idNutriologo);
+     }
+
 }
